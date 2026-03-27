@@ -10,8 +10,17 @@ let preguntasFacil = [
     { pista: "Capital de México", correcta: "CDMX", opciones: ["CDMX","Monterrey","Guadalajara","Puebla"] },
     { pista: "Animal que maúlla", correcta: "Gato", opciones: ["Perro","Gato","León","Tigre"] },
     { pista: "Color del pasto", correcta: "Verde", opciones: ["Azul","Rojo","Verde","Negro"] },
+    { pista: "Sirve para sentarse", correcta: "Silla", opciones: ["Mesa", "Silla", "Cama", "Puerta"] },
+    { pista: "La usas para dormir", correcta: "Cama", opciones: ["Sofá", "Cama", "Silla", "Alfombra"] },
+    { pista: "Para ver películas y dibujos", correcta: "Televisión", opciones: ["Radio", "Espejo", "Televisión", "Reloj"] },
     { pista: "Mes después de enero", correcta: "Febrero", opciones: ["Marzo","Febrero","Abril","Mayo"] },
-    { pista: "Planeta donde vivimos", correcta: "Tierra", opciones: ["Marte","Venus","Tierra","Júpiter"] }
+    { pista: "Tiene el cuello muy largo", correcta: "Jirafa", opciones: ["Elefante", "Cebra", "Jirafa", "Mono"] },
+    { pista: "Planeta donde vivimos", correcta: "Tierra", opciones: ["Marte","Venus","Tierra","Júpiter"] },
+    { pista: "Es larga, amarilla y dulce", correcta: "Plátano", opciones: ["Limón", "Plátano", "Sandía", "Coco"] },
+    { pista: "Se usa para hacer pizza", correcta: "Queso", opciones: ["Chocolate", "Arroz", "Pescado", "Queso"] },
+    { pista: "Brilla de día y da calor", correcta: "Sol", opciones: ["Luna", "Estrella", "Nube", "Sol"] },
+    { pista: "Cae de las nubes cuando llueve", correcta: "Agua", opciones: ["Fuego", "Agua", "Tierra", "Viento"] },
+    { pista: "Transporte con cuatro ruedas", correcta: "Coche", opciones: ["Barco", "Avión", "Coche", "Bicicleta"] }
 ];
 
 let preguntasMedio = [
@@ -29,7 +38,14 @@ let preguntasMedio = [
     { pista: "H2O es", correcta: "Agua", opciones: ["Fuego","Agua","Aire","Tierra"] },
     { pista: "Continentes", correcta: "5", opciones: ["3","5","7","10"] },
     { pista: "Color mezcla azul+rojo", correcta: "Morado", opciones: ["Verde","Morado","Amarillo","Naranja"] },
-    { pista: "Animal nocturno", correcta: "Murciélago", opciones: ["Águila","Murciélago","Paloma","Cuervo"] }
+    { pista: "Animal nocturno", correcta: "Murciélago", opciones: ["Águila","Murciélago","Paloma","Cuervo"] },
+    { pista: "Capital de Francia", correcta: "París", opciones: ["Londres", "Berlín", "París", "Roma"] },
+    { pista: "Ciudad de los canales", correcta: "Venecia", opciones: ["Roma", "Venecia", "Madrid", "París"] },
+    { pista: "Pintó la Mona Lisa", correcta: "Da Vinci", opciones: ["Picasso", "Dalí", "Van Gogh", "Da Vinci"] },
+    { pista: "Instrumento de 6 cuerdas", correcta: "Guitarra", opciones: ["Violín", "Arpa", "Guitarra", "Piano"] },
+    { pista: "Estructuras de Egipto", correcta: "Pirámides", opciones: ["Torres", "Templos", "Pirámides", "Castillos"] },
+    { pista: "Día de la Independencia de México", correcta: "16 de Septiembre", opciones: ["5 de Mayo", "16 de Septiembre", "20 de Noviembre", "1 de Mayo"] },   
+    { pista: "Moneda de la Unión Europea", correcta: "Euro", opciones: ["Dólar", "Libra", "Yen", "Euro"] }    
 ];
 
 let preguntasDificil = [
@@ -48,7 +64,16 @@ let preguntasDificil = [
     { pista: "Átomo ligero", correcta: "Hidrógeno", opciones: ["Helio","Hidrógeno","Oxígeno","Carbono"] },
     { pista: "País más grande", correcta: "Rusia", opciones: ["China","EEUU","Rusia","Canadá"] },
     { pista: "Fórmula agua", correcta: "H2O", opciones: ["CO2","H2O","O2","NaCl"] },
-    { pista: "Lenguaje base web", correcta: "HTML", opciones: ["Python","HTML","C#","Go"] }
+    { pista: "Lenguaje base web", correcta: "HTML", opciones: ["Python","HTML","C#","Go"] },
+    { pista: "Propuso la selección natural", correcta: "Darwin", opciones: ["Lamarck", "Darwin", "Linneo", "Aristóteles"] },
+    { pista: "Padre del psicoanálisis", correcta: "Freud", opciones: ["Jung", "Skinner", "Freud", "Piaget"] },
+    { pista: "Líder de la Revolución Rusa", correcta: "Lenin", opciones: ["Stalin", "Trotsky", "Lenin", "Marx"] },
+    { pista: "Capital de Australia", correcta: "Camberra", opciones: ["Sídney", "Melbourne", "Camberra", "Perth"] },
+    { pista: "Código legal de Babilonia", correcta: "Hammurabi", opciones: ["Justiniano", "Hammurabi", "Dracón", "Solón"] },
+    { pista: "Corriente artística de Dalí", correcta: "Surrealismo", opciones: ["Cubismo", "Surrealismo", "Impresionismo", "Fovismo"] },
+    { pista: "Escribió 'La Ilíada'", correcta: "Homero", opciones: ["Sófocles", "Eurípides", "Homero", "Platón"] },
+    { pista: "Creador del lenguaje C", correcta: "Ritchie", opciones: ["Stroustrup", "Ritchie", "Gosling", "Thompson"] },
+    { pista: "Primera programadora", correcta: "Ada Lovelace", opciones: ["Grace Hopper", "Ada Lovelace", "Marie Curie", "Hedy Lamarr"] }
 ];
 
 let preguntas = [];
