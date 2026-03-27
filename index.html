@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adivina la Palabra</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- 🔥 SOLO SE MUESTRA EN JUEGO -->
+<div id="progresoContainer" class="hidden">
+    <div id="progresoBar"></div>
+</div>
+
+<!-- MENU -->
+ <!-- 🎮 HUB DE JUEGOS -->
+<div id="hub" class="hub">
+
+    <h1>Los vapos 🎮</h1>
+
+        <!-- JUEGO 1 -->
+        <div class="grid-juegos">
+
+        <div class="card-juego" onclick="irAJuego()">
+        <img src="https://play-lh.googleusercontent.com/Z0gog3b0FuloARvV2CnnovJD6MXiOWEQSl4Vjcy1h-b9UTLb4Qc5PQx5wnCuQZdPhkc" alt="Adivina la palabra">
+        <div class="overlay">
+        <p>Adivina la Palabra</p>
+        </div>
+        </div>
+
+        <!-- FUTURO JUEGO -->
+        <div class="card-juego disabled">
+            <h2>🧠 Quiz Pro</h2>
+            <p>Próximamente...</p>
+            <button disabled>Pronto</button>
+        </div>
+
+        <!-- OTRO FUTURO -->
+        <div class="card-juego disabled">
+            <h2>🎯 Memorama</h2>
+            <p>Próximamente...</p>
+            <button disabled>Pronto</button>
+        </div>
+
+    </div>
+</div>
+
+<button id="btnHub" onclick="volverAlHub()">☰</button>
+
+
+<div class="container hidden" id="menu">
+    <h1>🎮 Adivina la Palabra</h1>
+
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+
+    <br><br>
+
+    <select id="dificultad">
+        <option value="facil">Fácil</option>
+        <option value="medio">Medio</option>
+        <option value="dificil">Difícil</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="iniciarJuego()">Jugar</button>
+</div>
+
+<!-- JUEGO -->
+<div class="container hidden" id="juego">
+    <h2 id="saludo"></h2>
+    <p id="contador"></p>
+
+    <p><strong>Pista:</strong></p>
+    <p id="pista"></p>
+
+    <div id="opciones"></div>
+
+    <p id="timer"></p>
+    <p id="resultado"></p>
+
+    <p>Puntos: <span id="puntos">0</span></p>
+</div>
+
+<!-- FINAL -->
+<div class="container hidden" id="final">
+    <h2>🏆 Resultados</h2>
+
+    <table id="tabla">
+        <tr>
+            <th>Jugador</th>
+            <th>Puntos</th>
+        </tr>
+    </table>
+
+    <br>
+    <button onclick="volverAJugar()">Volver a jugar</button>
+</div>
+<!-- SONIDOS -->
+<audio id="correcto" src="https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3"></audio>
+<audio id="incorrecto" src="error.mp3"></audio>
+<audio id="warning" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+<audio id="menuMusic" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_7b9b3c9c60.mp3">
+</audio>
+<script src="script.js"></script>
+</body>
+</html>
