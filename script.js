@@ -89,8 +89,8 @@ let sonidoTimer = document.getElementById("warning");
 // 🔥 CONFIGURACIÓN (puedes cambiar esto)
 const TOTAL_PREGUNTAS = {
     facil: 10,
-    medio: 10,
-    dificil: 8
+    medio: 16,
+    dificil: 16
 };
 
 function mezclar(arr) {
