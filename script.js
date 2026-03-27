@@ -124,15 +124,15 @@ function iniciarJuego() {
     dificultad = document.getElementById("dificultad").value;
 
     if (dificultad === "facil") {
-        preguntas = mezclar([...preguntasFacil]).slice(0,10);
+        preguntas = mezclar([...preguntasFacil]).slice(0, total);
     }
 
     if (dificultad === "medio") {
-        preguntas = mezclar([...preguntasMedio]).slice(0,10);
+        preguntas = mezclar([...preguntasMedio]).slice(0, total);
     }
 
     if (dificultad === "dificil") {
-        preguntas = mezclar([...preguntasDificil]).slice(0,8);
+        preguntas = mezclar([...preguntasDificil]).slice(0, total);
     }
 
     document.getElementById("menu").classList.add("hidden");
