@@ -314,9 +314,6 @@ button:hover {
         margin-top: 60px; /* ajusta aquí a tu gusto */
         transition: all 0.2s ease;
     }
-    #juego {
-        min-height: 600px;
-    }
      #progresoContainer {
     position: fixed;
     top: 25px; /* 🔥 AJUSTA AQUÍ */
