@@ -316,7 +316,7 @@ button:hover {
      #progresoContainer {
         width: 60%;
         height: 6px;
-        margin-top: 70px; /* 🔥 baja la barra */
+        margin-top: 50px; /* 🔥 baja la barra */
     }
 }
 @keyframes pop {
