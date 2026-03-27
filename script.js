@@ -72,9 +72,12 @@ function irAJuego() {
 
 function volverAlHub() {
     clearInterval(intervalo);
-    sonidoCorrecto.pause();
-    sonidoIncorrecto.pause();
     sonidoTimer.pause();
+    sonidoTimer.currentTime = 0;
+    sonidoCorrecto.pause();
+    sonidoCorrecto.currentTime = 0;
+    sonidoIncorrecto.pause();
+    sonidoIncorrecto.currentTime = 0;
     bloqueado = true;
     document.getElementById("juego").classList.add("hidden");
     document.getElementById("menu").classList.add("hidden");
