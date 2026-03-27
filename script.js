@@ -86,6 +86,13 @@ let sonidoCorrecto = document.getElementById("correcto");
 let sonidoIncorrecto = document.getElementById("incorrecto");
 let sonidoTimer = document.getElementById("warning");
 
+// 🔥 CONFIGURACIÓN (puedes cambiar esto)
+const TOTAL_PREGUNTAS = {
+    facil: 10,
+    medio: 10,
+    dificil: 8
+};
+
 function mezclar(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -123,17 +130,16 @@ function iniciarJuego() {
     nombreJugador = nombre;
     dificultad = document.getElementById("dificultad").value;
 
-    if (dificultad === "facil") {
-        preguntas = mezclar([...preguntasFacil]).slice(0, total);
-    }
+    let banco = [];
 
-    if (dificultad === "medio") {
-        preguntas = mezclar([...preguntasMedio]).slice(0, total);
-    }
+    if (dificultad === "facil") banco = preguntasFacil;
+    if (dificultad === "medio") banco = preguntasMedio;
+    if (dificultad === "dificil") banco = preguntasDificil;
 
-    if (dificultad === "dificil") {
-        preguntas = mezclar([...preguntasDificil]).slice(0, total);
-    }
+    // 🔥 AQUÍ ESTÁ LA CLAVE
+    let total = TOTAL_PREGUNTAS[dificultad];
+
+    preguntas = mezclar([...banco]).slice(0, total);
 
     document.getElementById("menu").classList.add("hidden");
     document.getElementById("juego").classList.remove("hidden");
