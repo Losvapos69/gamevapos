@@ -315,7 +315,7 @@ button:hover {
         transition: all 0.2s ease;
     }
     #juego {
-        min-height: 500px;
+        min-height: 550px;
     }
      #progresoContainer {
     position: fixed;
