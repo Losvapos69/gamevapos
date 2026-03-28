@@ -12,13 +12,29 @@ let intentos = 0;
 
 // 🔥 IR AL MENÚ DEL MEMORAMA
 function irAMemorama() {
-    ocultarTodo();
-    document.getElementById("hub").classList.add("hidden");
+    document.getElementById("hub").style.display = "none";
+
+    // 🔥 cerrar otros
+    document.getElementById("menu").classList.add("hidden");
+    document.getElementById("juego").classList.add("hidden");
+    document.getElementById("final").classList.add("hidden");
+
+    // 🔥 abrir memorama
     document.getElementById("menuMemorama").classList.remove("hidden");
+
+    // 🔥 reset básico
+    seleccionadas = [];
+    bloqueadoMemo = false;
 }
 
-function ocultarTodo() {
-    document.getElementById("hub").classList.add("hidden");
+function volverAlHub() {
+    clearInterval(intervalo);
+
+    // 🔥 reset memorama
+    seleccionadas = [];
+    bloqueadoMemo = false;
+
+     // 🔥 ocultar TODO manualmente (sin romper nada)
     document.getElementById("menu").classList.add("hidden");
     document.getElementById("juego").classList.add("hidden");
     document.getElementById("final").classList.add("hidden");
@@ -27,29 +43,9 @@ function ocultarTodo() {
     document.getElementById("menuMemorama").classList.add("hidden");
 
     document.getElementById("progresoContainer").classList.add("hidden");
-}
 
-
-function resetMemorama() {
-    seleccionadas = [];
-    bloqueadoMemo = false;
-    intentos = 0;
-
-    let tablero = document.getElementById("tablero");
-    if (tablero) tablero.innerHTML = "";
-}
-
-function volverAlHub() {
-    clearInterval(intervalo);
-    ocultarTodo();
-
-    // 🔥 RESET MEMORAMA
-    resetMemorama();
-
-    document.getElementById("memorama").classList.add("hidden");
-    document.getElementById("menuMemorama").classList.add("hidden");
-
-    document.getElementById("hub").classList.remove("hidden");
+    // 🔥 mostrar hub
+    document.getElementById("hub").style.display = "block";
 }
 
 // 🔥 INICIAR JUEGO
