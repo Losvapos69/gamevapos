@@ -49,14 +49,14 @@
     /* 🔥 tablero más compacto */
     #memorama #tablero {
         justify-content: center;
-        grid-template-columns: repeat(4, 65px);
+        grid-template-columns: repeat(4, 75px);
         gap: 16px;
     }
 
     /* 🔥 cartas más pequeñas */
     #memorama .carta {
-        width: 65px;
-        height: 65px;
+        width: 85px;
+        height: 85px;
     }
 
     /* 🔥 imágenes bien ajustadas */
