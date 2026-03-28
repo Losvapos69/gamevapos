@@ -1,0 +1,67 @@
+/* 🔥 IMPORTANTE: usa #memorama para que sí aplique */
+#memorama.container {
+    max-width: 550px; /* 🔥 más ancho */
+    width: 95%;
+}
+
+#memorama #tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#memorama .carta {
+    width: 90px;
+    height: 90px;
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#memorama .carta img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#memorama .carta.volteada {
+    background: #444;
+}
+
+#memorama .carta.correcta {
+    background: #00c853;
+}
+@media (max-width: 600px) {
+
+    /* 🔥 bajar un poco el memorama */
+    #memorama.container {
+        margin-top: 100px;
+        max-width: 95%;
+    }
+
+    /* 🔥 tablero más compacto */
+    #memorama #tablero {
+        grid-template-columns: repeat(4, 65px);
+        gap: 8px;
+    }
+
+    /* 🔥 cartas más pequeñas */
+    #memorama .carta {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* 🔥 imágenes bien ajustadas */
+    #memorama .carta img {
+        object-fit: cover;
+    }
+
+}
+
