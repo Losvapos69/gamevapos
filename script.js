@@ -102,7 +102,6 @@ function mezclar(arr) {
 }
 
 function irAJuego() {
-    ocultarTodo();
     document.getElementById("hub").style.display = "none";
     document.getElementById("menu").classList.remove("hidden");
 }
