@@ -14,10 +14,8 @@ let intentos = 0;
 function irAMemorama() {
     document.getElementById("hub").style.display = "none";
 
-    // 🔥 cerrar otros
-    document.getElementById("menu").classList.add("hidden");
-    document.getElementById("juego").classList.add("hidden");
-    document.getElementById("final").classList.add("hidden");
+    // 🔥 asegurar limpieza
+    document.getElementById("memorama").classList.add("hidden");
 
     // 🔥 abrir memorama
     document.getElementById("menuMemorama").classList.remove("hidden");
@@ -50,15 +48,14 @@ function volverAlHub() {
 
 // 🔥 INICIAR JUEGO
 function iniciarMemorama() {
-    // 🔥 RESET SIEMPRE
-    seleccionadas = [];
-    bloqueadoMemo = false;
-
     document.getElementById("menuMemorama").classList.add("hidden");
     document.getElementById("memorama").classList.remove("hidden");
 
     let tablero = document.getElementById("tablero");
     tablero.innerHTML = "";
+// 🔥 RESET SIEMPRE
+    seleccionadas = [];
+    bloqueadoMemo = false;
 
     // 🔥 crear pares
     cartas = mezclar([...imagenesBase, ...imagenesBase]);
