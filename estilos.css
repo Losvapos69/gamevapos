@@ -288,20 +288,29 @@ button:hover {
     background: #00c853;
 }
 
-/* 📱 RESPONSIVE */
+/* 📱 RESPONSIVE PRO */
 @media (max-width: 600px) {
+
     body {
         font-size: 16px;
+        display: block !important;
     }
+
+    /* 🔥 HUB MÁS GRANDE Y CENTRADO */
+    .hub {
+        padding: 20px;
+    }
+
     .hub .grid-juegos {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 350px; /* 👈 más compacto tipo app */
+        margin: 20px auto;
     }
 
     .hub .card-juego {
         aspect-ratio: 1 / 1;
-        max-width: 140px; /* 🔥 controla tamaño */
-        margin: 0 auto;
+        width: 100%;
     }
 
     .hub .card-juego img {
@@ -310,26 +319,26 @@ button:hover {
         object-fit: cover;
     }
 
+    /* 🔥 CONTENEDORES MÁS CENTRADOS */
     .container {
-        margin-top: 120px !important; /* controla altura */
+        margin-top: 100px !important;
+        width: 92%;
+        max-width: 380px; /* 👈 tamaño tipo iPhone */
     }
 
-    /* 🔥 ASEGURA QUE NO HAYA FLEX RARO */
-    body {
-        display: block !important;
-    }
-
-    /* 🔥 ESPACIO PARA BOTÓN Y BARRA */
+    /* 🔥 AJUSTE DEL JUEGO */
     #juego {
-        margin-top: 70px;
+        margin-top: 80px;
     }
-     #progresoContainer {
-        width: 65%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 150px;
+
+    /* 🔥 BARRA DE PROGRESO BIEN POSICIONADA */
+    #progresoContainer {
+        width: 70%;
+        margin: 70px auto 10px auto; /* 👈 clave */
     }
+
 }
+
 @keyframes pop {
     0% { transform: scale(1);}
     50% { transform: scale(1.2);}
