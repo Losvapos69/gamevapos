@@ -332,10 +332,11 @@ button:hover {
     }
 
     /* 🔥 BARRA DE PROGRESO BIEN POSICIONADA */
-    #progresoContainer {
-        width: 70%;
-        margin: 70px auto 10px auto; /* 👈 clave */
-    }
+   #progresoContainer {
+    width: calc(100% - 40px);
+    max-width: 380px;
+    margin: 60px auto 10px auto;
+}
 
 }
 
