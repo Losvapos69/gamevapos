@@ -103,6 +103,10 @@ function mezclar(arr) {
 
 function irAJuego() {
     document.getElementById("hub").style.display = "none";
+    // 🔥 CERRAR MEMORAMA (AQUÍ ESTÁ EL FIX)
+    document.getElementById("memorama").classList.add("hidden");
+    document.getElementById("menuMemorama").classList.add("hidden");
+    
     document.getElementById("menu").classList.remove("hidden");
 }
 
