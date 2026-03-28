@@ -333,7 +333,7 @@ button:hover {
 
     /* 🔥 BARRA DE PROGRESO BIEN POSICIONADA */
    #progresoContainer {
-    width: calc(100% - 40px);
+    width: 92%;
     max-width: 380px;
     margin: 60px auto 10px auto;
     }
