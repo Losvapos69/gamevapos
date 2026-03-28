@@ -48,8 +48,9 @@
 
     /* 🔥 tablero más compacto */
     #memorama #tablero {
+        justify-content: center;
         grid-template-columns: repeat(4, 65px);
-        gap: 8px;
+        gap: 16px;
     }
 
     /* 🔥 cartas más pequeñas */
