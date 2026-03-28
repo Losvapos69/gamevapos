@@ -122,6 +122,10 @@ function volverAlHub() {
     document.getElementById("juego").classList.add("hidden");
     document.getElementById("menu").classList.add("hidden");
     document.getElementById("final").classList.add("hidden");
+    
+    document.getElementById("memorama").classList.add("hidden");
+    document.getElementById("menuMemorama").classList.add("hidden");
+    
     document.getElementById("progresoContainer").classList.add("hidden");
     document.getElementById("hub").style.display = "block";
     document.getElementById("progresoBar").style.width = "0%";
