@@ -12,9 +12,23 @@ let intentos = 0;
 
 // 🔥 IR AL MENÚ DEL MEMORAMA
 function irAMemorama() {
+    ocultarTodo();
     document.getElementById("hub").classList.add("hidden");
     document.getElementById("menuMemorama").classList.remove("hidden");
 }
+
+function ocultarTodo() {
+    document.getElementById("hub").classList.add("hidden");
+    document.getElementById("menu").classList.add("hidden");
+    document.getElementById("juego").classList.add("hidden");
+    document.getElementById("final").classList.add("hidden");
+
+    document.getElementById("memorama").classList.add("hidden");
+    document.getElementById("menuMemorama").classList.add("hidden");
+
+    document.getElementById("progresoContainer").classList.add("hidden");
+}
+
 
 function resetMemorama() {
     seleccionadas = [];
@@ -27,6 +41,7 @@ function resetMemorama() {
 
 function volverAlHub() {
     clearInterval(intervalo);
+    ocultarTodo();
 
     // 🔥 RESET MEMORAMA
     resetMemorama();
