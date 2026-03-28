@@ -333,9 +333,9 @@ button:hover {
 
     /* 🔥 BARRA DE PROGRESO BIEN POSICIONADA */
    #progresoContainer {
-    width: 92%;
+    width: 62%;
     max-width: 380px;
-    margin: 60px auto 10px auto;
+    margin: 30px auto 10px auto;
     }
 
 }
