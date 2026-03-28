@@ -38,30 +38,43 @@
 #memorama .carta.correcta {
     background: #00c853;
 }
+#btnHub {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+
+    width: 50px;
+    height: 50px;
+
+    /* 🔥 NO CAMBIA TAMAÑO */
+}
 @media (max-width: 600px) {
 
-    /* 🔥 bajar un poco el memorama */
-    #memorama.container {
-        margin-top: 150px;
-        max-width: 95%;
-    }
-
-    /* 🔥 tablero más compacto */
-    #memorama #tablero {
+    /* 🔥 CENTRAR TODO COMO APP */
+    body {
+        display: flex;
         justify-content: center;
-        grid-template-columns: repeat(4, 75px);
-        gap: 16px;
+        align-items: flex-start;
     }
 
-    /* 🔥 cartas más pequeñas */
+    /* 🔥 CONTENEDOR DEL MEMORAMA */
+    #memorama.container {
+        margin-top: 90px;
+        width: 100%;
+        max-width: 380px; /* 👈 CLAVE (iPhone Pro Max) */
+    }
+
+    /* 🔥 TABLERO PROPORCIONAL */
+    #memorama #tablero {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    /* 🔥 CARTAS ADAPTATIVAS */
     #memorama .carta {
-        width: 85px;
-        height: 85px;
-    }
-
-    /* 🔥 imágenes bien ajustadas */
-    #memorama .carta img {
-        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1 / 1; /* 🔥 SIEMPRE CUADRADAS */
     }
 
 }
