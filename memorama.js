@@ -16,8 +16,32 @@ function irAMemorama() {
     document.getElementById("menuMemorama").classList.remove("hidden");
 }
 
+function resetMemorama() {
+    seleccionadas = [];
+    bloqueadoMemo = false;
+    intentos = 0;
+
+    let tablero = document.getElementById("tablero");
+    if (tablero) tablero.innerHTML = "";
+}
+
+function volverAlHub() {
+    clearInterval(intervalo);
+
+    // 🔥 RESET MEMORAMA
+    resetMemorama();
+
+    document.getElementById("memorama").classList.add("hidden");
+    document.getElementById("menuMemorama").classList.add("hidden");
+
+    document.getElementById("hub").classList.remove("hidden");
+}
+
 // 🔥 INICIAR JUEGO
 function iniciarMemorama() {
+    // 🔥 RESET SIEMPRE
+    seleccionadas = [];
+    bloqueadoMemo = false;
 
     document.getElementById("menuMemorama").classList.add("hidden");
     document.getElementById("memorama").classList.remove("hidden");
