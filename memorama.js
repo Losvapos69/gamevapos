@@ -1,8 +1,12 @@
 // 🔥 IMÁGENES (ponlas en /img/)
-let imagenesBase = [
-    "1.jpg","2.jpg","3.jpg","4.jpg",
-    "5.jpg","6.jpg","7.jpg","8.jpg"
-];
+let temas = {
+    avengers: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"],
+    animales: ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+    comida: ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+    deportes: ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+    carros: ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+    logos: ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"]
+};
 
 // duplicar pares
 let cartas = [];
@@ -23,6 +27,12 @@ function irAMemorama() {
     // 🔥 reset básico
     seleccionadas = [];
     bloqueadoMemo = false;
+}
+
+function elegirTema() {
+    let claves = Object.keys(temas);
+    let random = claves[Math.floor(Math.random() * claves.length)];
+    return random;
 }
 
 function volverAlHub() {
@@ -56,50 +66,63 @@ function iniciarMemorama() {
 // 🔥 RESET SIEMPRE
     seleccionadas = [];
     bloqueadoMemo = false;
+    intentos = 0;
+    
+    actualizarIntentos();
+    // 🔥 ELEGIR TEMA RANDOM
+    let tema = elegirTema();
 
-    // 🔥 crear pares
-    cartas = mezclar([...imagenesBase, ...imagenesBase]);
+    // 🔥 DUPLICAR CARTAS (PARES)
+    let base = temas[tema];
+    let cartas = [...base, ...base];
 
+    // 🔥 MEZCLAR
+    cartas = mezclar(cartas);
+
+    // 🔥 CREAR TABLERO
     cartas.forEach((img, index) => {
         let div = document.createElement("div");
         div.classList.add("carta");
+
         div.dataset.valor = img;
-        div.dataset.index = index;
+        div.dataset.tema = tema;
 
         div.onclick = () => voltearCarta(div);
 
         tablero.appendChild(div);
     });
 
-    intentos = 0;
-    actualizarIntentos();
-
-    mostrarCartasInicial(); // 🔥 mostrar 4 segundos
+    // 🔥 MOSTRAR TODAS 4 SEGUNDOS
+    mostrarTodas(cartas, tema);
 }
 
+
+
 // 🔥 MOSTRAR CARTAS AL INICIO
-function mostrarCartasInicial() {
-    let cartasDOM = document.querySelectorAll("#memorama .carta");
+function mostrarTodas(cartas, tema) {
+    let cartasDOM = document.querySelectorAll(".carta");
 
-    cartasDOM.forEach(carta => {
-        carta.innerHTML = `<img src="Avenger/${carta.dataset.valor}">`;
+    cartasDOM.forEach((carta, i) => {
+        carta.innerHTML = `<img src="memorama/${tema}/${cartas[i]}">`;
     });
-
-    bloqueadoMemo = true;
 
     setTimeout(() => {
         cartasDOM.forEach(carta => {
             carta.innerHTML = "";
         });
-        bloqueadoMemo = false;
     }, 4000);
 }
 
+
 // 🔥 VOLTEAR CARTA
 function voltearCarta(carta) {
+
     if (bloqueadoMemo || carta.classList.contains("correcta") || carta.innerHTML) return;
 
-    carta.innerHTML = `<img src="Avenger/${carta.dataset.valor}">`;
+    // 🔥 USA EL TEMA DINÁMICO
+    let tema = carta.dataset.tema;
+
+    carta.innerHTML = `<img src="memorama/${tema}/${carta.dataset.valor}">`;
     carta.classList.add("volteada");
 
     seleccionadas.push(carta);
@@ -111,20 +134,26 @@ function voltearCarta(carta) {
         let [c1, c2] = seleccionadas;
 
         if (c1.dataset.valor === c2.dataset.valor) {
+
             c1.classList.add("correcta");
             c2.classList.add("correcta");
 
             seleccionadas = [];
             bloqueadoMemo = false;
+
         } else {
+
             setTimeout(() => {
+
                 c1.innerHTML = "";
                 c2.innerHTML = "";
+
                 c1.classList.remove("volteada");
                 c2.classList.remove("volteada");
 
                 seleccionadas = [];
                 bloqueadoMemo = false;
+
             }, 800);
         }
 
