@@ -160,6 +160,10 @@ function voltearCarta(carta) {
     }
 }
 
+console.log("Tema:", tema);
+console.log("Ruta:", `memorama/${tema}/${carta.dataset.valor}`);
+
+
 // 🔥 INTENTOS
 function actualizarIntentos() {
     document.getElementById("intentos").innerText = "Intentos: " + intentos;
