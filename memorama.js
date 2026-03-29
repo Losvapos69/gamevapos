@@ -82,7 +82,7 @@ function mostrarCartasInicial() {
     let cartasDOM = document.querySelectorAll("#memorama .carta");
 
     cartasDOM.forEach(carta => {
-        carta.innerHTML = `<img src="img/${carta.dataset.valor}">`;
+        carta.innerHTML = `<img src="Avenger/${carta.dataset.valor}">`;
     });
 
     bloqueadoMemo = true;
