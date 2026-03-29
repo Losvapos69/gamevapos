@@ -102,7 +102,7 @@ function mostrarTodas(cartas, tema) {
     let cartasDOM = document.querySelectorAll(".carta");
 
     cartasDOM.forEach((carta, i) => {
-        carta.innerHTML = `<img src="memorama/${tema}/${cartas[i]}">`;
+        carta.innerHTML = <img src="assets/memorama/${tema}/${carta.dataset.valor}">
     });
 
     setTimeout(() => {
