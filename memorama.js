@@ -99,7 +99,7 @@ function mostrarCartasInicial() {
 function voltearCarta(carta) {
     if (bloqueadoMemo || carta.classList.contains("correcta") || carta.innerHTML) return;
 
-    carta.innerHTML = `<img src="img/${carta.dataset.valor}">`;
+    carta.innerHTML = `<img src="Avenger/${carta.dataset.valor}">`;
     carta.classList.add("volteada");
 
     seleccionadas.push(carta);
