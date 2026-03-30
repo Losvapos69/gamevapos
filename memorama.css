@@ -3,7 +3,6 @@
     max-width: 550px; /* 🔥 más ancho */
     width: 95%;
 }
-
 #memorama #tablero {
     display: grid;
     grid-template-columns: repeat(4, 100px);
