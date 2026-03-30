@@ -38,44 +38,58 @@
 #memorama .carta.correcta {
     background: #00c853;
 }
-#btnHub {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 999;
 
-    width: 50px;
-    height: 50px;
-
-    /* 🔥 NO CAMBIA TAMAÑO */
+#btnReinicio {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: #00c853;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 250px;
+    transition: 0.3s;
 }
+
+#btnReinicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00c853;
+}
+
 @media (max-width: 600px) {
 
-    /* 🔥 CENTRAR TODO COMO APP */
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    /* 🔥 CONTENEDOR DEL MEMORAMA */
+    /* 🔥 bajar un poco el memorama */
     #memorama.container {
-        margin-top: 90px;
-        width: 100%;
-        max-width: 380px; /* 👈 CLAVE (iPhone Pro Max) */
+        margin-top: 100px;
+        max-width: 95%;
     }
 
-    /* 🔥 TABLERO PROPORCIONAL */
+    /* 🔥 tablero más compacto */
     #memorama #tablero {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(4, 65px);
+        gap: 8px;
     }
 
-    /* 🔥 CARTAS ADAPTATIVAS */
+    /* 🔥 cartas más pequeñas */
     #memorama .carta {
-        width: 100%;
-        aspect-ratio: 1 / 1; /* 🔥 SIEMPRE CUADRADAS */
+        width: 65px;
+        height: 65px;
+    }
+
+    /* 🔥 imágenes bien ajustadas */
+    #memorama .carta img {
+        object-fit: cover;
+    }
+
+    #btnReinicio {
+        width: 90%;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 25px;
+        margin-bottom: 50px; /* 🔥 más espacio abajo */
     }
 
 }
-
