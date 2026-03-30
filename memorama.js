@@ -95,6 +95,9 @@ function iniciarMemorama() {
     mostrarTodas(cartas, tema);
 }
 
+function mezclar(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
 
 
 // 🔥 MOSTRAR CARTAS AL INICIO
@@ -102,7 +105,8 @@ function mostrarTodas(cartas, tema) {
     let cartasDOM = document.querySelectorAll(".carta");
 
     cartasDOM.forEach((carta, i) => {
-        carta.innerHTML = <img src="assets/memorama/${tema}/${carta.dataset.valor}">
+        carta.innerHTML = `<img src="${tema}/${carta.dataset.valor}">`;
+
     });
 
     setTimeout(() => {
@@ -121,7 +125,7 @@ function voltearCarta(carta) {
     // 🔥 USA EL TEMA DINÁMICO
     let tema = carta.dataset.tema;
 
-    carta.innerHTML = `<img src="memorama/${tema}/${carta.dataset.valor}">`;
+    carta.innerHTML = `<img src="${tema}/${carta.dataset.valor}">`;
     carta.classList.add("volteada");
 
     seleccionadas.push(carta);
@@ -159,10 +163,6 @@ function voltearCarta(carta) {
         actualizarIntentos();
     }
 }
-
-console.log("Tema:", tema);
-console.log("Ruta:", `memorama/${tema}/${carta.dataset.valor}`);
-
 
 // 🔥 INTENTOS
 function actualizarIntentos() {
