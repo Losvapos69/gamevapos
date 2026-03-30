@@ -7,6 +7,9 @@ let temas = {
     carros: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"]
 };
 
+//Reinicio de memorama
+let parejasEncontradas = 0;
+
 // duplicar pares
 let cartas = [];
 let seleccionadas = [];
@@ -34,6 +37,23 @@ function elegirTema() {
     return random;
 }
 
+//Botón de reinicio
+function mostrarBotonReinicio() {
+    let contenedor = document.getElementById("memorama");
+
+    let btn = document.createElement("button");
+    btn.innerText = "Volver a jugar";
+    btn.id = "btnReinicio";
+
+    btn.onclick = () => {
+        iniciarMemorama();
+        btn.remove();
+    };
+
+    contenedor.appendChild(btn);
+}
+
+
 function volverAlHub() {
     clearInterval(intervalo);
 
@@ -59,6 +79,11 @@ function volverAlHub() {
 function iniciarMemorama() {
     document.getElementById("menuMemorama").classList.add("hidden");
     document.getElementById("memorama").classList.remove("hidden");
+    //remover el botón de reinicio
+    let viejoBtn = document.getElementById("btnReinicio");
+    if (viejoBtn) viejoBtn.remove();
+
+        parejasEncontradas = 0;
 
     let tablero = document.getElementById("tablero");
     tablero.innerHTML = "";
@@ -95,6 +120,7 @@ function iniciarMemorama() {
     mostrarTodas(cartas, tema);
 }
 
+//Mezclar
 function mezclar(array) {
     return array.sort(() => Math.random() - 0.5);
 }
@@ -140,6 +166,15 @@ function voltearCarta(carta) {
 
             c1.classList.add("correcta");
             c2.classList.add("correcta");
+
+             parejasEncontradas++; // 🔥 SUMA
+
+        // 🔥 SI YA GANASTE
+        if (parejasEncontradas === 8) {
+        setTimeout(() => {
+            mostrarBotonReinicio();
+        }, 500);
+            }
 
             seleccionadas = [];
             bloqueadoMemo = false;
