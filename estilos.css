@@ -121,7 +121,7 @@ body {
     color: white;
     font-size: 22px;
 
-    border-radius: 12px; /* si quieres más cuadrado ponle 6px */
+    border-radius: 15px; /* si quieres más cuadrado ponle 6px */
     cursor: pointer;
 
     backdrop-filter: blur(10px);
@@ -319,18 +319,20 @@ button:hover {
     }
 
     #btnHub {
-  | position: fixed;
-    top: 13px;
-    left: 13px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
 
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px
+     }
 
 
     /* 🔥 AJUSTE BARRA PROGRESO */
     #progresoContainer {
         width: 55%;
-        height: 8px; /* 🔥 más delgada en celular */
+        height: 5px; /* 🔥 más delgada en celular */
         margin: 20px auto;
     }
 
