@@ -1,0 +1,208 @@
+/* 🔥 IMPORTANTE: usa #memorama para que sí aplique */
+
+:root {
+    --marginTop: 200px;
+}
+
+body {
+    font-family: Arial;
+    background: radial-gradient(circle, #3f3813, #203343, #5b2c64);
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #00c853;
+    transition: 0.3s;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    width: 80%;
+    max-width: 250px;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,255,100,0.4);
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 0 0 10px rgba(0,255,100,0.3);
+}
+
+.container {
+    margin-top: var(--marginTop);
+     background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px rgba(0,255,100,0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+
+
+#memorama.container {
+    max-width: 560px; /* 🔥 más ancho */
+    margin-top: 100px;
+    width: 100%;
+}
+
+#memorama #tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    gap: 18px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#memorama .carta {
+    width: 120px;
+    height: 120px;
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+#memorama .carta img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#memorama .carta.volteada {
+    background: #444;
+}
+
+#memorama .carta.correcta {
+    background: #00c853;
+}
+
+#btnReinicio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: #00c853;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 250px;
+    transition: 0.3s;
+}
+
+/* BOTONES */
+.hub button {
+    background: var(--hub-accent);
+    border-radius: 10px;
+    padding:10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#btnHub {
+   position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 22px;
+
+    border-radius: 15px; /* si quieres más cuadrado ponle 6px */
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+}
+
+#btnHub:hover {
+    background: #00c853;
+}
+
+#btnReinicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00c853;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    /* 🔥 bajar un poco el memorama */
+     :root {
+        --marginTop: 80px; /* 🔥 AJUSTE PARA CELULAR */
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        margin-top: var(--marginTop); /* 🔥 usa la variable */
+    }
+
+    #memorama.container {
+        max-width: 250px;
+        margin-top: 100px;
+        max-width: 100%;
+    }
+
+    /* 🔥 tablero más compacto */
+    #memorama #tablero {
+        grid-template-columns: repeat(4, 65px);
+        gap: 8px;
+    }
+
+    /* 🔥 cartas más pequeñas */
+    #memorama .carta {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* 🔥 imágenes bien ajustadas */
+    #memorama .carta img {
+        object-fit: cover;
+    }
+
+    #btnReinicio {
+        width: 90%;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 25px;
+        margin-bottom: 50px; /* 🔥 más espacio abajo */
+    }
+
+}
