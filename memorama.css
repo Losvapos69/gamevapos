@@ -1,19 +1,20 @@
 /* 🔥 IMPORTANTE: usa #memorama para que sí aplique */
 #memorama.container {
-    max-width: 550px; /* 🔥 más ancho */
-    width: 95%;
+    max-width: 560px; /* 🔥 más ancho */
+    margin-top: 220px;
+    width: 100%;
 }
 #memorama #tablero {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 12px;
+    grid-template-columns: repeat(4, 120px);
+    gap: 18px;
     justify-content: center;
     margin-top: 20px;
 }
 
 #memorama .carta {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     background: #222;
     border-radius: 10px;
     display: flex;
@@ -63,7 +64,7 @@
     /* 🔥 CENTRADO PERFECTO */
     #memorama.container {
         margin-top: 80px;
-        width: 100%;
+        width: 50%;
     }
 
     /* 🔥 TABLERO ADAPTATIVO */
