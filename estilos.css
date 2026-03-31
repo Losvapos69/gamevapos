@@ -290,17 +290,25 @@ button:hover {
 
 /* 📱 RESPONSIVE */
 @media (max-width: 600px) {
+
+    :root {
+        --marginTop: 80px; /* 🔥 AJUSTE PARA CELULAR */
+    }
     body {
         font-size: 16px;
     }
+    .container {
+        margin-top: var(--marginTop); /* 🔥 usa la variable */
+    }
+
+    /* 🔥 HUB MÁS COMPACTO */
     .hub .grid-juegos {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
     .hub .card-juego {
-        aspect-ratio: 1 / 1;
-        max-width: 140px; /* 🔥 controla tamaño */
+        max-width: 140px;
         margin: 0 auto;
     }
 
@@ -309,10 +317,16 @@ button:hover {
         height: 100%;
         object-fit: cover;
     }
-    .container {
-        margin-top: 40px;
+
+    /* 🔥 AJUSTE BARRA PROGRESO */
+    #progresoContainer {
+        width: 65%;
+        height: 10px; /* 🔥 más delgada en celular */
+        margin: 10px auto;
     }
+
 }
+
 @keyframes pop {
     0% { transform: scale(1);}
     50% { transform: scale(1.2);}
