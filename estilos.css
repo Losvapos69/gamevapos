@@ -292,10 +292,10 @@ button:hover {
 @media (max-width: 600px) {
 
     :root {
-        --marginTop: 80px; /* 🔥 AJUSTE PARA CELULAR */
+        --marginTop: 50px; /* 🔥 AJUSTE PARA CELULAR */
     }
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
     .container {
         margin-top: var(--marginTop); /* 🔥 usa la variable */
@@ -317,6 +317,15 @@ button:hover {
         height: 100%;
         object-fit: cover;
     }
+
+    #btnHub {
+  | position: fixed;
+    top: 15px;
+    left: 15px;
+
+    width: 20px;
+    height: 20px;
+
 
     /* 🔥 AJUSTE BARRA PROGRESO */
     #progresoContainer {
