@@ -320,11 +320,11 @@ button:hover {
 
     #btnHub {
   | position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 8px;
+    left: 8px;
 
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 
 
     /* 🔥 AJUSTE BARRA PROGRESO */
