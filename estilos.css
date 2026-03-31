@@ -292,7 +292,7 @@ button:hover {
 @media (max-width: 600px) {
 
     :root {
-        --marginTop: 50px; /* 🔥 AJUSTE PARA CELULAR */
+        --marginTop: 20px; /* 🔥 AJUSTE PARA CELULAR */
     }
     body {
         font-size: 14px;
