@@ -182,14 +182,18 @@ select {
 
     /* 🔥 tablero más compacto */
     #memorama #tablero {
-        grid-template-columns: repeat(4, 90px);
-        gap: 12px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 🔥 en vez de px */
+        gap: 10px;
+        justify-content: center;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     /* 🔥 cartas más pequeñas */
     #memorama .carta {
-        width: 85px;
-        height: 85px;
+        width: 100%;
+        aspect-ratio: 1 / 1; /* 🔥 mantiene cuadrado */
     }
 
     /* 🔥 imágenes bien ajustadas */
