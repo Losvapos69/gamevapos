@@ -331,9 +331,9 @@ button:hover {
 
     /* 🔥 AJUSTE BARRA PROGRESO */
     #progresoContainer {
-        width: 60%;
+        width: 65%;
         height: 10px; /* 🔥 más delgada en celular */
-        margin: 20px auto;
+        margin: 25px auto;
     }
 
 }
