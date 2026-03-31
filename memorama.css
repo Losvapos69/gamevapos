@@ -60,28 +60,34 @@
 
 @media (max-width: 600px) {
 
-    /* 🔥 bajar un poco el memorama */
+    /* 🔥 CENTRADO PERFECTO */
     #memorama.container {
-        margin-top: 80px;
-        max-width: 95%;
+        margin-top: 90px;
+        width: 95%;
     }
 
-    /* 🔥 tablero más compacto */
+    /* 🔥 TABLERO ADAPTATIVO */
     #memorama #tablero {
-        grid-template-columns: repeat(4, 65px);
+        grid-template-columns: repeat(4, 1fr);
         gap: 8px;
     }
 
-    /* 🔥 cartas más pequeñas */
+    /* 🔥 CARTAS MÁS GRANDES AUTOMÁTICAS */
     #memorama .carta {
-        width: 65px;
-        height: 65px;
+        width: 100%;
+        aspect-ratio: 1 / 1;
     }
 
-    /* 🔥 imágenes bien ajustadas */
-    #memorama .carta img {
-        object-fit: cover;
+    /* 🔥 BOTÓN */
+    #btnReinicio {
+        width: 90%;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 25px;
+        margin-bottom: 60px;
     }
+
+}
 
     #btnReinicio {
         width: 90%;
