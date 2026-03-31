@@ -331,7 +331,7 @@ button:hover {
     #progresoContainer {
         width: 65%;
         height: 10px; /* 🔥 más delgada en celular */
-        margin: 10px auto;
+        margin: 20px auto;
     }
 
 }
