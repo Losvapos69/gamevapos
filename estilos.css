@@ -142,7 +142,7 @@ body {
     
     .hub h1 {
     box-sizing: border-box;
-    padding: 30px 15px 15px 15px; /* antes 40px o más */
+    padding: 20px 10px; /* antes 40px o más */
     margin-bottom: 15px;
     margin-top: 0;
     }
