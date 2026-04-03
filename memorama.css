@@ -163,7 +163,7 @@ select {
 
     /* 🔥 bajar un poco el memorama */
      :root {
-        --marginTop: 80px; /* 🔥 AJUSTE PARA CELULAR */
+        --marginTop: 120px; /* 🔥 AJUSTE PARA CELULAR */
     }
 
     body {
