@@ -140,9 +140,9 @@ body {
         padding: 0;
     }
     
-    .hub h1 {
+    .hub {
     box-sizing: border-box;
-    padding: 20px 10px; /* antes 40px o más */
+    padding: 20px; /* antes 40px o más */
     margin-bottom: 15px;
     margin-top: 0;
     }
