@@ -186,7 +186,7 @@ select {
         grid-template-columns: repeat(4, 1fr); /* 🔥 en vez de px */
         gap: 10px;
         justify-content: center;
-        max-width: 500px;
+        max-width: 250px;
         margin: 0 auto;
     }
 
