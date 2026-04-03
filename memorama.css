@@ -163,7 +163,7 @@ select {
 
     /* 🔥 bajar un poco el memorama */
      :root {
-        --marginTop: 120px; /* 🔥 AJUSTE PARA CELULAR */
+        --marginTop: 130px; /* 🔥 AJUSTE PARA CELULAR */
     }
 
     body {
@@ -183,8 +183,8 @@ select {
     /* 🔥 tablero más compacto */
     #memorama #tablero {
         display: grid;
-        grid-template-columns: repeat(4, 85px); /* 🔥 en vez de px */
-        gap: 12px;
+        grid-template-columns: repeat(4, 95px); /* 🔥 en vez de px */
+        gap: 10px;
         justify-content: center;
         max-width: 500px;
         margin: 0 auto;
@@ -192,8 +192,8 @@ select {
 
     /* 🔥 cartas más pequeñas */
     #memorama .carta {
-        width: 85px;
-        height: 85px;
+        width: 95px;
+        height: 95px;
     }
 
     /* 🔥 imágenes bien ajustadas */
