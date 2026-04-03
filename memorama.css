@@ -1,3 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 /* 🔥 IMPORTANTE: usa #memorama para que sí aplique */
 
 :root {
@@ -160,6 +170,15 @@ select {
 }
 
 @media (max-width: 600px) {
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    }
+
+    * {
+    box-sizing: border-box;
+    }
 
     /* 🔥 bajar un poco el memorama */
      :root {
