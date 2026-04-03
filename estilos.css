@@ -136,11 +136,13 @@ body {
 
     body {
         font-size: 18px;
+        margin: 0;
+        padding: 0;
     }
     
     .hub h1 {
     box-sizing: border-box;
-    padding: 60px 20px 20px 20px; /* antes 40px o más */
+    padding: 30px 15px 15px 15px; /* antes 40px o más */
     margin-bottom: 20px;
     margin-top: 0;
     }
@@ -149,7 +151,7 @@ body {
     .hub .grid-juegos {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 🔥 siempre 2 columnas */
-    gap: 15px; /* menos espacio */
+    gap: 13px; /* menos espacio */
     max-width: 500px; /* más compacto */
     }
 
