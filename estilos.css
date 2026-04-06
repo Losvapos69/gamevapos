@@ -11,15 +11,22 @@ body {
 .container {
     width: 100%;
     max-width: 400px;
+    -webkit-animation: fadeIn 0.5s ease;
     animation: fadeIn 0.5s ease;
 }
+
 .hub {
-    display: block; /* ❌ quitamos flex columna */
+    display: block;
     padding-top: 50px;
+    /* Fix Safari: background-size es obligatorio para que la animación de posición funcione */
     background-size: 200% 200%;
+    -webkit-animation: fondoAnimado 8s ease infinite;
     animation: fondoAnimado 8s ease infinite;
+    -webkit-align-items: center;
     align-items: center;
     height: 100vh;
+    /* Fix Safari: usa -webkit-box-sizing */
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
     --hub-bg1: #177958bd;
@@ -31,19 +38,26 @@ body {
     color: white;
 }
 
+@-webkit-keyframes fondoAnimado {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 @keyframes fondoAnimado {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
 /* GRID */
 .hub .grid-juegos {
+    display: -ms-grid;
     display: grid;
+    /* Fix Safari: grid-template-columns con auto-fit puede fallar — fallback explícito en media query */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     max-width: 1000px;
-    margin: 0 auto; /* 🔥 centra horizontal */
+    margin: 0 auto;
 }
 
 /* TARJETAS */
@@ -51,26 +65,36 @@ body {
     position: relative;
     width: 100%;
     background: rgba(255,255,255,0.05);
+    /* Fix Safari: prefijo para backdrop-filter */
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    aspect-ratio: 1 / 1; /* 🔥 esto los hace cuadrados */
+    /* Fix Safari: aspect-ratio no soportado en Safari < 15 — usamos padding hack como fallback */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 15px;
     cursor: pointer;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
+
 /* IMAGEN */
 .hub .card-juego img {
     width: 100%;
     height: auto;
+    -o-object-fit: contain;
     object-fit: contain;
     display: block;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
+
 /* HOVER SUAVE */
 .hub .card-juego:hover {
+    -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
+
 /* OVERLAY (texto oculto) */
 .overlay {
     position: absolute;
@@ -78,52 +102,55 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-
     background: rgba(0,0,0,0.7);
     color: white;
     text-align: center;
-
     padding: 10px;
-
     opacity: 0;
+    -webkit-transform: translateY(100%);
     transform: translateY(100%);
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
+
 /* CUANDO PASAS EL CURSOR */
 .card-juego:hover .overlay {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
 }
+
 /* BOTONES */
 .hub button {
     background: var(--hub-accent);
     border-radius: 10px;
-    padding:10px;
+    padding: 10px;
     border: none;
     color: white;
     cursor: pointer;
 }
+
 #btnHub {
-   position: fixed;
+    position: fixed;
     top: 15px;
     left: 15px;
     z-index: 999;
-
     width: 50px;
     height: 50px;
-
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-justify-content: center;
     justify-content: center;
-
     background: rgba(0,0,0,0.6);
     border: none;
     color: white;
     font-size: 22px;
-
-    border-radius: 15px; /* si quieres más cuadrado ponle 6px */
+    border-radius: 15px;
     cursor: pointer;
-
+    /* Fix Safari: prefijo para backdrop-filter */
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -133,7 +160,6 @@ body {
 
 /* 📱 RESPONSIVE */
 @media (max-width: 480px) {
-
     body {
         font-size: 20px;
         margin: 0;
@@ -141,11 +167,12 @@ body {
     }
 
     .hub {
-    box-sizing: border-box;
-
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
     }
-    /* 🔥 HUB MÁS COMPACTO */
+
     .hub .grid-juegos {
+        /* Fix Safari móvil: auto-fit falla en algunos Safari — columnas fijas */
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
         margin: 2px;
@@ -159,17 +186,16 @@ body {
     .hub .card-juego img {
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
     }
 
     #btnHub {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-
-    width: 45px;
-    height: 45px;
-    border-radius: 8px
-     }
-
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+    }
 }
