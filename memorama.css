@@ -1,9 +1,9 @@
-/* 🔥 IMPORTANTE: usa #memorama para que sí apique */
- 
+/* 🔥 IMPORTANTE: usa #memorama para que sí aplique */
+
 :root {
     --marginTop: 250px;
 }
- 
+
 body {
     margin: 0;
     padding: 0;
@@ -13,13 +13,12 @@ body {
     text-align: center;
     font-size: 22px;
 }
- 
+
 button {
     padding: 10px;
     border-radius: 10px;
     border: none;
     background: #00c853;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
     color: white;
     cursor: pointer;
@@ -27,13 +26,12 @@ button {
     width: 80%;
     max-width: 250px;
 }
- 
+
 button:hover {
-    -webkit-transform: translateY(-2px) scale(1.05);
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 8px 20px rgba(0,255,100,0.4);
 }
- 
+
 select {
     padding: 10px;
     border-radius: 10px;
@@ -42,15 +40,13 @@ select {
     color: white;
     font-size: 16px;
     cursor: pointer;
+
     box-shadow: 0 0 10px rgba(0,255,100,0.3);
-    /* Fix Safari: evita que Safari estilice el select por su cuenta */
-    -webkit-appearance: none;
-    appearance: none;
 }
- 
+
 .container {
     margin-top: var(--marginTop);
-    background: rgba(0,0,0,0.6);
+     background: rgba(0,0,0,0.6);
     padding: 20px;
     border-radius: 20px;
     width: 90%;
@@ -58,60 +54,52 @@ select {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 0 20px rgba(0,255,100,0.3);
-    -webkit-animation: fadeIn 0.5s ease;
     animation: fadeIn 0.5s ease;
-    /* Fix Safari: fuerza capa de composición */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
 }
- 
+
+
+
 #memorama.container {
-    max-width: 560px;
+    max-width: 560px; /* 🔥 más ancho */
     margin-top: 100px;
     width: 100%;
 }
- 
+
 #memorama #tablero {
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(4, 120px);
     gap: 18px;
-    -webkit-gap: 18px; /* fallback por si acaso */
     justify-content: center;
     margin-top: 20px;
 }
- 
+
 #memorama .carta {
     width: 120px;
     height: 120px;
     background: #222;
     border-radius: 10px;
-    display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-align-items: center;
     align-items: center;
     cursor: pointer;
     position: relative;
 }
- 
+
 #memorama .carta img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    -o-object-fit: cover;
     object-fit: cover;
 }
- 
+
 #memorama .carta.volteada {
     background: #444;
 }
- 
+
 #memorama .carta.correcta {
     background: #00c853;
 }
- 
+
 #btnReinicio {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -124,108 +112,122 @@ select {
     cursor: pointer;
     width: 80%;
     max-width: 250px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
- 
+
 /* BOTONES */
 .hub button {
     background: var(--hub-accent);
     border-radius: 10px;
-    padding: 10px;
+    padding:10px;
     border: none;
     color: white;
     cursor: pointer;
 }
- 
 #btnHub {
-    position: fixed;
+   position: fixed;
     top: 15px;
     left: 15px;
     z-index: 999;
+
     width: 50px;
     height: 50px;
-    display: -webkit-flex;
+
     display: flex;
-    -webkit-align-items: center;
     align-items: center;
-    -webkit-justify-content: center;
     justify-content: center;
+
     background: rgba(0,0,0,0.6);
     border: none;
     color: white;
     font-size: 22px;
-    border-radius: 15px;
+
+    border-radius: 15px; /* si quieres más cuadrado ponle 6px */
     cursor: pointer;
-    /* Fix Safari: prefijo para backdrop-filter */
-    -webkit-backdrop-filter: blur(10px);
+
     backdrop-filter: blur(10px);
 }
- 
+
 #btnHub:hover {
     background: #00c853;
 }
- 
+
 #btnReinicio:hover {
-    -webkit-transform: scale(1.05);
     transform: scale(1.05);
     box-shadow: 0 0 15px #00c853;
 }
- 
+
 .hidden {
     display: none;
 }
- 
+
 @media (max-width: 480px) {
-    body {
-        margin: 2px;
-        padding: 0;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+    /* 🔥 bajar un poco el memorama */
+     :root {
+        --marginTop: 200px; /* 🔥 AJUSTE PARA CELULAR */
     }
- 
-    * {
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-    }
- 
-    :root {
-        --marginTop: 200px;
-    }
- 
+
     body {
         font-size: 18px;
     }
- 
+
     .container {
-        margin-top: var(--marginTop);
+        margin-top: var(--marginTop); /* 🔥 usa la variable */
         padding: 20px;
     }
- 
+
+
     #memorama.container {
+        min-width: 98%;
         max-width: 98%;
-        margin: 100px auto;
+        margin: 30% auto;
     }
- 
+
+    #btnHub {
+    position: fixed;
+    top: 2%;
+    left: 4%;
+
+    width: 12%;
+    height: 5.5%;
+    border-radius: 30%;
+    }
+
+    /* 🔥 tablero más compacto */
     #memorama #tablero {
-        grid-template-columns: repeat(4, 90px);
-        margin: 0 auto;
+        grid-template-columns: repeat(4, 25%);
+        margin: 0% 0;
+        margin-right: 1%;
+        margin-left: 1%;
         gap: 8px;
     }
- 
+
+    /* 🔥 cartas más pequeñas */
     #memorama .carta {
-        width: 90px;
+        width: 98%;
         height: 90px;
     }
- 
+
+    /* 🔥 imágenes bien ajustadas */
     #memorama .carta img {
-        -o-object-fit: cover;
         object-fit: cover;
     }
- 
+
     #btnReinicio {
         width: 90%;
         font-size: 16px;
         padding: 10px;
-        margin-top: 25px;
-        margin-bottom: 50px;
+        margin-top: 2%;
+        margin-bottom: 5%; /* 🔥 más espacio abajo */
     }
+
 }
