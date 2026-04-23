@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monos Enamorados 🐒❤️</title>
+  <link rel="stylesheet" href="encuentra.css" />
+</head>
+<body>
+
+  <!-- ===== PANTALLA DE INICIO ===== -->
+  <div id="screen-start" class="screen active">
+    <div class="stars" id="stars"></div>
+    <div class="start-content">
+      <div class="title-block">
+        <div class="emoji-deco">🐒</div>
+        <h1 class="game-title">Monos<br>Enamorados</h1>
+        <div class="emoji-deco flip">🐒</div>
+      </div>
+      <p class="subtitle">¿Podrás encontrar el amor<br>de tu vida mono?</p>
+      <div class="heart-deco">❤️</div>
+      <button id="btn-start" class="btn-main">¡Jugar Ahora!</button>
+      <p class="hint-text">Elige bien tus palabras... 🍌</p>
+    </div>
+  </div>
+
+  <!-- ===== PANTALLA DE JUEGO ===== -->
+  <div id="screen-game" class="screen">
+
+    <!-- HUD superior -->
+    <div class="hud">
+      <div class="hud-left">
+        <span class="hud-label">Atracción</span>
+        <div class="attraction-bar-wrap">
+          <div class="attraction-bar" id="attraction-bar">
+            <div class="attraction-fill" id="attraction-fill"></div>
+            <div class="attraction-heart" id="attraction-heart">❤️</div>
+          </div>
+        </div>
+        <span class="attraction-value" id="attraction-value">50</span>
+      </div>
+      <div class="hud-right">
+        <span class="hud-label">Escena</span>
+        <span class="scene-counter" id="scene-counter">1 / 6</span>
+      </div>
+    </div>
+
+    <!-- Escenario 2D -->
+    <div class="scene-area" id="scene-area">
+      <div class="scene-bg" id="scene-bg"></div>
+
+      <!-- NPC Mono -->
+      <div class="monkey npc-monkey" id="npc-monkey">
+        <div class="monkey-body">
+          <div class="monkey-head">
+            <div class="monkey-face">
+              <div class="monkey-eyes">
+                <div class="eye left-eye"><div class="pupil"></div></div>
+                <div class="eye right-eye"><div class="pupil"></div></div>
+              </div>
+              <div class="monkey-blush left-blush" id="npc-blush-l"></div>
+              <div class="monkey-blush right-blush" id="npc-blush-r"></div>
+              <div class="monkey-mouth" id="npc-mouth">😊</div>
+            </div>
+            <div class="monkey-ears">
+              <div class="ear left-ear"></div>
+              <div class="ear right-ear"></div>
+            </div>
+          </div>
+          <div class="monkey-torso npc-torso"></div>
+          <div class="monkey-arms">
+            <div class="arm left-arm"></div>
+            <div class="arm right-arm"></div>
+          </div>
+        </div>
+        <div class="monkey-label">💕 Monita</div>
+      </div>
+
+      <!-- Player Mono -->
+      <div class="monkey player-monkey" id="player-monkey">
+        <div class="monkey-body">
+          <div class="monkey-head">
+            <div class="monkey-face">
+              <div class="monkey-eyes">
+                <div class="eye left-eye"><div class="pupil"></div></div>
+                <div class="eye right-eye"><div class="pupil"></div></div>
+              </div>
+              <div class="monkey-mouth" id="player-mouth">😊</div>
+            </div>
+            <div class="monkey-ears">
+              <div class="ear left-ear"></div>
+              <div class="ear right-ear"></div>
+            </div>
+          </div>
+          <div class="monkey-torso player-torso"></div>
+          <div class="monkey-arms">
+            <div class="arm left-arm"></div>
+            <div class="arm right-arm"></div>
+          </div>
+        </div>
+        <div class="monkey-label">🐒 Tú</div>
+      </div>
+
+      <!-- Burbuja de diálogo NPC -->
+      <div class="dialog-bubble npc-bubble" id="npc-bubble">
+        <span id="npc-text">...</span>
+      </div>
+
+      <!-- Burbuja de diálogo Player -->
+      <div class="dialog-bubble player-bubble hidden" id="player-bubble">
+        <span id="player-text">...</span>
+      </div>
+
+      <!-- Efecto de reacción -->
+      <div class="reaction-fx" id="reaction-fx"></div>
+    </div>
+
+    <!-- Panel de opciones -->
+    <div class="options-panel" id="options-panel">
+      <p class="options-title" id="options-title">¿Qué responderás?</p>
+      <div class="options-grid" id="options-grid">
+        <!-- Se generan por JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== PANTALLA DE RESULTADO ===== -->
+  <div id="screen-result" class="screen">
+    <div class="stars" id="stars-result"></div>
+    <div class="result-content">
+      <div class="result-scene" id="result-scene"></div>
+      <h2 class="result-title" id="result-title">¡Resultado!</h2>
+      <p class="result-msg" id="result-msg"></p>
+      <div class="final-bar-wrap">
+        <div class="final-bar">
+          <div class="final-fill" id="final-fill"></div>
+        </div>
+        <span class="final-score" id="final-score"></span>
+      </div>
+      <button id="btn-retry" class="btn-main">Volver a Intentarlo</button>
+    </div>
+  </div>
+
+  <script src="encuentra.js"></script>
+</body>
+</html>
