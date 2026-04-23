@@ -248,7 +248,7 @@ button:hover {
         margin-top: var(--marginTop); /* 🔥 usa la variable */
     }
     #juego.container {
-        margin-top: 28%;
+        margin-top: 100px;
         font-size: 20px;
     }
 
@@ -258,8 +258,8 @@ button:hover {
     top: 2%;
     left: 4%;
 
-    width: 12%;
-    height: 5.5%;
+    width: 45px;
+    height: 45px;
     border-radius: 30%;
     }
 
@@ -267,7 +267,7 @@ button:hover {
     #progresoContainer {
         width: 65%;
         height: 10px; /* 🔥 más delgada en celular */
-        margin: 9% auto;
+        margin: 35px auto;
         min-width: auto;
         max-width: 700px;
     }
