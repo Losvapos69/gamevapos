@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="memorama.css">
+</head>
+
+<body>
+
+<button id="btnHub" onclick="volverAlHub()">☰</button>
+
+<!-- MENU MEMORAMA -->
+<div class="container" id="menuMemorama">
+    <h1>🧠Memorama</h1>
+    <button onclick="iniciarMemorama()">Jugar</button>
+</div>
+<!-- MEMORAMA -->
+<div class="container hidden" id="memorama">
+    <h2>🧠Memorama</h2>
+    <div id="tablero"></div>
+    <p id="intentos"></p>
+</div>
+
+<script src="memorama.js"></script>
+
+<script>
+function volverAlHub() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

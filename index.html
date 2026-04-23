@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los vapos 🎮</title>
+
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<div id="hub" class="hub">
+
+    <h1>Los vapos 🎮</h1>
+
+    <div class="grid-juegos">
+
+        <!-- ADIVINA -->
+        <div class="card-juego" onclick="irA('adivina.html')">
+            <img src="hub/adivina.png">
+            <div class="overlay">
+                <p>Adivina la Palabra</p>
+            </div>
+        </div>    
+
+        <!-- MEMORAMA -->
+        <!-- <div class="card-juego" onclick="irA('memorama.html')"> '-->
+        <div class="card-juego disable">
+            <img src="hub/memo.png">
+            <div class="overlay">
+                <p>Próximamente...</p> 
+            </div>
+        </div>
+        
+         <!-- FUTURO JUEGO -->
+        <div class="card-juego disable">
+            <img src="hub/gta.jpg" alt="Adivina la palabra">
+            <div class="overlay">
+            <p>Próximamente...</p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script>
+function irA(pagina) {
+    window.location.href = pagina;
+}
+</script>
+
+</body>
+</html>
