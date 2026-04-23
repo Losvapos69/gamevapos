@@ -1,0 +1,159 @@
+[33m8008a93[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'main' of https://github.com/Losvapos69/gamevapos
+[33mfadf887[m Actualización del proyecto
+[33m99f8656[m Update index.html
+[33m9aaf8e3[m Update adivina.js
+[33m9ffd75b[m Update memorama.css
+[33me410241[m Update estilos.css
+[33me672ade[m Update memorama.css
+[33maca1897[m Update memorama.html
+[33mcea2199[m Update adivina.html
+[33mdef447e[m Add files via upload
+[33mb330f5d[m Delete adivina.css
+[33m3b0e48a[m Add files via upload
+[33mee8eeed[m Delete estilos.css
+[33m1d65743[m Delete adivina.css
+[33m9c5db7c[m Delete memorama.css
+[33m71e64fc[m Update memorama.css
+[33mdecb0b5[m Update memorama.css
+[33me7ee701[m Update memorama.css
+[33m6efa9a2[m Update memorama.css
+[33mbc74648[m Update memorama.css
+[33mb47dbdc[m Update memorama.css
+[33m4e3e1c7[m Update memorama.css
+[33m1392c52[m Update memorama.css
+[33m4e80ada[m Update estilos.css
+[33m0caf799[m Update memorama.css
+[33mb123bec[m Update memorama.css
+[33m6694b14[m Update memorama.css
+[33mba86905[m Update memorama.css
+[33m2341bad[m Update memorama.css
+[33mf94158d[m Update estilos.css
+[33m0b3f53d[m Update memorama.css
+[33m6820dfd[m Update estilos.css
+[33m4cba38c[m Update estilos.css
+[33m9241455[m Update memorama.css
+[33m3ce5e3b[m Update estilos.css
+[33m5718b25[m Update memorama.css
+[33m3f6f36f[m Add files via upload
+[33mb2c33ff[m Delete estilos.css
+[33m66b6d74[m Delete memorama.js
+[33md559f64[m Delete script.js
+[33m8e6b673[m Delete memorama.css
+[33m79bdf7c[m Delete index.html
+[33mc38de7d[m Update estilos.css
+[33m7a05faa[m Update memorama.css
+[33mba8186b[m Update estilos.css
+[33m7cacd11[m Update estilos.css
+[33mcfbb45b[m Update estilos.css
+[33m06dea92[m Update memorama.css
+[33mc1e19a0[m Update estilos.css
+[33m70e7faf[m Update memorama.css
+[33m89c0a3d[m Update estilos.css
+[33m8643ac5[m Update estilos.css
+[33m75f194d[m Update estilos.css
+[33m8937698[m Update estilos.css
+[33m7ba7e3a[m Update memorama.css
+[33mb79314d[m Update estilos.css
+[33mc3f92d4[m Update memorama.css
+[33m1593cc3[m Update estilos.css
+[33mc1cee52[m Update memorama.css
+[33m42efb8b[m Update memorama.css
+[33m77838fd[m Update memorama.js
+[33m57f766b[m Update memorama.css
+[33m7206d06[m Update estilos.css
+[33m794ce15[m Add files via upload
+[33m0b9653b[m Add files via upload
+[33md58ed9d[m Delete deportes directory
+[33m54f51dc[m Add files via upload
+[33m530e277[m Delete animales directory
+[33m687a27b[m Update memorama.js
+[33m2e19af0[m Add files via upload
+[33m7b69c74[m Add files via upload
+[33me76e03d[m Add files via upload
+[33m91032b3[m Update memorama.js
+[33m4a6017d[m Update memorama.js
+[33mb24fc17[m Add files via upload
+[33md37def1[m Delete deportes directory
+[33m29a5142[m Delete comida directory
+[33m18e0cf7[m Delete carros directory
+[33ma469711[m Delete animales directory
+[33m0a2a6ce[m Update memorama.js
+[33m2648992[m Update memorama.js
+[33m95e38e4[m Update memorama.js
+[33m1cf6d85[m Update memorama.js
+[33mca1144f[m Delete memo.png
+[33m6aeb82c[m Delete gta.jpg
+[33me6f6195[m Delete adivina.png
+[33m5a8ca75[m Add files via upload
+[33m1ed54e2[m Update memorama.js
+[33m4efc2a0[m Update memorama.js
+[33m3ed5e19[m Update memorama.js
+[33mfb32dd0[m Add files via upload
+[33mf5ec1ee[m Delete img directory
+[33m9c89815[m Update estilos.css
+[33m7612e17[m Update estilos.css
+[33mfbba087[m Update estilos.css
+[33mf5b48b9[m Update estilos.css
+[33md0be377[m Update estilos.css
+[33me14bd18[m Update estilos.css
+[33m647c49c[m Update estilos.css
+[33m4706e8a[m Update estilos.css
+[33m7df9f6a[m Update estilos.css
+[33m542e036[m Update script.js
+[33m6de1a3b[m Update script.js
+[33m28d2bc7[m Update memorama.js
+[33m8c9b2e7[m Update index.html
+[33m51d5211[m Update memorama.js
+[33m0430f38[m Update script.js
+[33m9a9cff8[m Refactor memorama.js to add ocultarTodo function
+[33md970934[m Update script.js
+[33m5f40ea7[m Refactor memorama game logic and add reset functionality
+[33mf536dcc[m Refactor CSS for responsive design and button placement
+[33mb6288e8[m Update CSS for mobile layout and card dimensions
+[33mc5f58a8[m Refactor CSS for responsive design adjustments
+[33m6ad8a87[m Refactor CSS for memorama layout and responsiveness
+[33m2fd3071[m Fix HTML structure and update script sources
+[33m8bba5ea[m Refactor index.html for new game features
+[33m2d8c6fd[m Add files via upload
+[33ma90db8a[m Add files via upload
+[33mbe9efad[m Refactor game logic and question data structure
+[33me3a25e3[m Refactor game logic and update question sets
+[33m87b80c9[m Refactor game logic and update difficulty settings
+[33m2776fac[m Implement dynamic question limits for game difficulty
+[33m1ebc63d[m Update script.js
+[33mb029dbd[m Update script.js
+[33m9f03bd9[m Refactor game logic and update questions
+[33m1b3e6f9[m Update script.js
+[33mf95ee66[m Restore original estilos.css content
+[33m51ec16d[m Update estilos.css
+[33m2eb4ab8[m Refactor estilos.css to improve structure and clarity
+[33m6bab6c9[m Restore styles in estilos.css
+[33m09a6048[m Restore styles in estilos.css
+[33m6d7a7b8[m Refactor CSS styles for improved organization
+[33m6256eac[m Refactor CSS styles for layout and design
+[33mb0f2f29[m Refactor estilos.css for improved structure and clarity
+[33m032fc79[m Update estilos.css
+[33mec86d8b[m Refactor CSS styles for improved structure
+[33m488ae7c[m Refactor estilos.css for improved organization
+[33ma6b8b75[m Refactor estilos.css to improve structure and readability
+[33ma11c530[m Restore original estilos.css content
+[33m8c6dbf9[m Refactor CSS styles for improved layout and design
+[33m8d2d8de[m Refactor CSS for responsive design and layout adjustments
+[33m3e05b06[m Refactor estilos.css to improve structure and readability
+[33m42808ce[m Refactor CSS styles for improved structure and clarity
+[33m2b3eb00[m Update estilos.css
+[33m02d8ae5[m Refactor estilos.css to improve structure and clarity
+[33mc4d0b89[m Refactor estilos.css for improved structure and responsiveness
+[33m4f3c464[m Refactor estilos.css to improve structure and readability
+[33m4dde460[m Restore styles in estilos.css
+[33m43690ef[m Refactor estilos.css for improved structure and readability
+[33ma572d1c[m Refactor estilos.css for improved layout and design
+[33m8b3f44a[m Add files via upload
+[33m651754d[m Update game images and fix class names
+[33m0586eec[m Refactor estilos.css for improved structure and readability
+[33mab00c31[m Refactor estilos.css for improved structure and clarity
+[33ma2afec7[m Refactor estilos.css for improved structure and design
+[33md7ffec5[m Refactor estilos.css for improved structure and styling
+[33m092993f[m Delete .gitattributes
+[33mb5cbd84[m Add files via upload
+[33m036bf5f[m Initial commit
