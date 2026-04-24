@@ -2223,6 +2223,7 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 5px;
+        max-width: 600px;
         margin: 2px;
     }
 
