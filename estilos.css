@@ -2206,11 +2206,11 @@ body {
     }
 
     #menus {
+      word-break: break-word;
       padding: 0;
       margin: 0 auto;
       width: 65%;
       min-width: 300px;
-      max-width: 900px;
     }
 
     .hub {
@@ -2221,7 +2221,7 @@ body {
     /* 🔥 HUB MÁS COMPACTO */
     .hub .grid-juegos {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 5px;
         margin: 2px;
     }
