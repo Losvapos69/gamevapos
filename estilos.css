@@ -2220,6 +2220,7 @@ body {
     }
     /* 🔥 HUB MÁS COMPACTO */
     .hub .grid-juegos {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
         margin: 2px;
