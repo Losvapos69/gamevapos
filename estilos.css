@@ -2288,3 +2288,48 @@ body {
     }
 
 }
+/* ============================================
+   2K — ≥ 2160px
+   ============================================ */
+@media (min-width: 2160px) {
+   body {
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+    }
+    #stars {
+   margin: 0 0;
+    }
+
+    #menus {
+      padding: 0;
+      margin: 0 auto;
+      width: 15%;
+    }
+
+    .hub {
+      padding-top: 150px;
+      max-width: auto;
+      box-sizing: border-box;
+
+    }
+    /* 🔥 HUB MÁS COMPACTO */
+    .hub .grid-juegos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1px;
+      max-width: 1000px;
+      margin: 30px auto; /* 🔥 centra horizontal */
+    }
+
+    .hub .card-juego {
+        max-width: 90%;
+        margin: 5px auto;
+    }
+
+    .hub .card-juego img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
